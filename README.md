@@ -10,9 +10,11 @@ This add-in was [hacked together](https://twitter.com/Latish/status/132628802511
 See more [on YouTube](https://youtu.be/WVclIFyCCOo?t=153)
 
 ## SSMS add-in
-I've used Facets many times and I find it very useful to help me understand the data I'm query from a SQL database, inside of management studio. The results table doesn't give you a very good idea, if any, about how lots of rows are distributed per column, if you have a lot of NULL values or how the relationship between columns are.
+I've used Facets many times and I find it very useful to help me understand the data I'm querying from a SQL database.
 
-It is easy enough to export a result set as CSV, go to the Facets page and load it. But it would be much nice to have inside of management studio.
+The results table doesn't give you a very good idea, if any, about how lots of rows are distributed per column, if you have a lot of NULL values or how the relationship between columns are.
+
+While it is easy enough to export a result set as CSV, go to the Facets page and load it — it would be much nicer to have it inside of management studio...
 
 Which is what you can do with this add-in — you simply query your data as you always do, and then click `View in Facets" from the Tools menu and your result set is automatically displayed:
 
