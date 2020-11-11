@@ -1,4 +1,4 @@
-# DataDive 💦
+# 💦DataDive
 Data viz extension for SQL Server Management Studio.
 
 # Status [hacks 💬] 
