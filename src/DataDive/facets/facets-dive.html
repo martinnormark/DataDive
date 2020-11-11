@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <script>
+
+    window.setDiveData = (json) => {
+      setTimeout(() => {
+        if (window.dive) {
+          console.log("Will set data in facets", json);
+
+					window.dive.data = json;
+				}
+      }, 500);
+    };
+
+    setupComplete = false;
+    window.addEventListener('WebComponentsReady', function() {
+      if (setupComplete) {
+        return;
+      }
+
+      setupComplete = true;
+
+      var link = document.createElement('link');
+      link.rel = 'import';
+			link.href = 'https://raw.githubusercontent.com/PAIR-code/facets/gh-pages/facets.html';
+      link.onload= function()
+      {
+        var dive = document.createElement('facets-dive');
+        dive.crossOrigin = 'anonymous';
+        document.body.appendChild(dive);
+
+        window.dive = dive;
+      }
+
+      document.head.appendChild(link);
+    });
+  </script>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.3.3/webcomponents-lite.js'></script>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      align-items: center;
+      background-color: #ffd139; /* Quick Draw yellow. */
+      display: flex;
+      height: 35px;
+      justify-content: center;
+      width: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    facets-dive {
+      height: calc(100vh - 40px);
+    }
+  </style>
+</head>
+<body>
+  <div class='header'>
+    <span>Facets dive 💦</span>
+  </div>
+</body>
+</html>
